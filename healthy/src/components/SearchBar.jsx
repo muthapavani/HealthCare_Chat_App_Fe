@@ -11,11 +11,9 @@ const SearchBar = () => {
   useEffect(() => {
     if (query.trim()) {
       setIsTyping(true);
-      // Clear previous timeout
       if (typingTimeoutRef.current) {
         clearTimeout(typingTimeoutRef.current);
       }
-      // Set new timeout
       typingTimeoutRef.current = setTimeout(() => {
         setIsTyping(false);
         searchMessages(query);
@@ -50,8 +48,7 @@ const SearchBar = () => {
                    bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                    focus:outline-none focus:ring-2 focus:ring-healthcare-primary"
         />
-        
-        {/* Clear button */}
+
         {query && (
           <button
             onClick={clearSearch}
@@ -60,8 +57,7 @@ const SearchBar = () => {
             <FiX className="w-4 h-4" />
           </button>
         )}
-        
-        {/* Typing indicator */}
+
         {isTyping && (
           <div className="absolute right-10 top-1/2 transform -translate-y-1/2 flex space-x-1">
             <div className="w-1.5 h-1.5 bg-healthcare-primary rounded-full animate-bounce"></div>

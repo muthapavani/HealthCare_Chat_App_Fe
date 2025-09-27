@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
 
   const uploadDocumentHandler = useCallback(async (file) => {
     try {
-      // Simulate upload process
+
       const newDocument = {
         id: Date.now().toString(),
         name: file.name,
@@ -30,7 +30,6 @@ export const AppProvider = ({ children }) => {
 
       setDocuments(prev => [...prev, newDocument]);
 
-      // Simulate API call
       setTimeout(() => {
         setDocuments(prev => 
           prev.map(doc => 
@@ -64,7 +63,6 @@ export const AppProvider = ({ children }) => {
     setMessages(prev => [...prev, userMessage]);
     setIsTyping(true);
 
-    // Simulate AI response after delay
     setTimeout(() => {
       const systemMessage = {
         id: (Date.now() + 1).toString(),

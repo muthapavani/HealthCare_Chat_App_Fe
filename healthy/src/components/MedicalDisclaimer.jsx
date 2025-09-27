@@ -1,4 +1,3 @@
-// src/components/MedicalDisclaimer/MedicalDisclaimer.jsx
 import React, { useState } from 'react';
 import { FiAlertTriangle, FiCheck, FiX, FiShield } from 'react-icons/fi';
 

@@ -64,12 +64,6 @@ const DocumentList = () => {
 
   const renderPreviewContent = () => {
     if (!previewDocument) return null;
-
-    // For now, we'll show a simple preview with document info
-    // In a real application, you might want to:
-    // - Use a PDF viewer for PDF files
-    // - Convert DOCX to HTML for preview
-    // - Show plain text for TXT files
     return (
       <div className="p-6">
         <div className="text-center mb-6">
@@ -105,7 +99,6 @@ const DocumentList = () => {
           </div>
         </div>
 
-        {/* Placeholder for actual document content */}
         <div className="mt-6 p-4 bg-gray-100 dark:bg-gray-600 rounded-lg">
           <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
             {previewDocument.status === 'processed' 
@@ -181,7 +174,6 @@ const DocumentList = () => {
         )}
       </div>
 
-      {/* Preview Modal */}
       {isPreviewOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">

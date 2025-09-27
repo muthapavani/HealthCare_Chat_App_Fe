@@ -6,7 +6,6 @@ const DocumentUpload = () => {
   const [isDragging, setIsDragging] = useState(false);
   const { uploadDocument } = useApp();
 
-  // Drag and drop handlers
   const handleDrag = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();

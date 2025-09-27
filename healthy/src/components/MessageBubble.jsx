@@ -25,8 +25,6 @@ const MessageBubble = ({ message }) => {
         }`}>
           <p className="text-sm">{message.content}</p>
         </div>
-        
-        {/* Sources */}
         {message.sources && message.sources.length > 0 && (
           <div className="mt-1 space-y-1">
             {message.sources.map((source, index) => (

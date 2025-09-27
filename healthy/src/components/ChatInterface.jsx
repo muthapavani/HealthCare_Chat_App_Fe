@@ -19,7 +19,6 @@ const ChatInterface = () => {
     scrollToBottom();
   }, [messages, isTyping]);
 
-  // Handle user typing indicator
   useEffect(() => {
     if (inputMessage.trim()) {
       setIsUserTyping(true);
@@ -61,7 +60,6 @@ const ChatInterface = () => {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg h-full flex flex-col min-h-0">
-      {/* Messages Container - Fixed height with proper scrolling */}
       <div 
         ref={messagesContainerRef}
         className="flex-1 min-h-0 overflow-y-auto"
@@ -87,8 +85,7 @@ const ChatInterface = () => {
             {messages.map((message) => (
               <MessageBubble key={message.id} message={message} />
             ))}
-            
-            {/* AI Typing Indicator */}
+
             {isTyping && (
               <div className="flex items-start space-x-2">
                 <div className="flex-shrink-0">
@@ -106,7 +103,6 @@ const ChatInterface = () => {
               </div>
             )}
 
-            {/* User Typing Indicator */}
             {isUserTyping && (
               <div className="flex justify-end">
                 <div className="bg-healthcare-primary text-white rounded-lg p-3">
@@ -124,7 +120,6 @@ const ChatInterface = () => {
         )}
       </div>
 
-      {/* Input Area - Fixed at bottom */}
       <div className="border-t border-gray-200 dark:border-gray-600 p-4 flex-shrink-0">
         <div className="flex space-x-2">
           <div className="flex-1 relative">
@@ -145,7 +140,7 @@ const ChatInterface = () => {
               maxLength="500"
               disabled={documents.length === 0}
             />
-            {/* Typing indicator inside input */}
+
             {isUserTyping && (
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex space-x-1">
                 <div className="w-1.5 h-1.5 bg-healthcare-primary rounded-full animate-bounce"></div>
