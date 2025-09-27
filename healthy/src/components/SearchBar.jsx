@@ -1,5 +1,3 @@
-
-// src/components/SearchBar/SearchBar.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '/src/contexts/AppContext';
 import { FiSearch, FiX } from 'react-icons/fi';

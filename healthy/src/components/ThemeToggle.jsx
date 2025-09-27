@@ -1,4 +1,3 @@
-// src/components/ThemeToggle/ThemeToggle.jsx
 import React from 'react';
 import { useTheme } from '/src/contexts/ThemeContext';
 import { FiSun, FiMoon } from 'react-icons/fi';

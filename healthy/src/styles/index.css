@@ -1,4 +1,4 @@
-/* src/styles/index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,26 +18,22 @@
   }
 }
 
-/* Mobile-specific styles */
 @media (max-width: 767px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
-  /* Improve touch targets */
+ 
   button, [role="button"] {
     min-height: 44px;
     min-width: 44px;
   }
 }
 
-/* Ensure proper flexbox scrolling */
 .min-h-0 {
   min-height: 0;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -75,13 +71,11 @@
   flex: 1 1 0%;
 }
 
-/* Ensure no overflow on body */
 html, body, #root {
   height: 100vh;
   overflow: hidden;
 }
 
-/* Animation for message bubbles */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -97,10 +91,6 @@ html, body, #root {
   animation: slideIn 0.3s ease-out;
 }
 
-
-
-
-/* Modal styles */
 .fixed {
   position: fixed;
 }
@@ -120,10 +110,6 @@ html, body, #root {
   max-height: 90vh;
 }
 
-
-
-
-/* Add to your index.css for PDF viewer */
 .react-pdf__Page {
   display: inline-block;
 }

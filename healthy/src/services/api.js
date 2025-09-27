@@ -1,15 +1,13 @@
-// src/services/api.js
+
 import axios from 'axios';
 
-// Create axios instance with base configuration
 const api = axios.create({
   baseURL: 'http://localhost:3001/api',
   timeout: 10000,
 });
 
-// Mock API functions for development
 export const uploadDocument = async (file) => {
-  // Simulate API call
+
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({

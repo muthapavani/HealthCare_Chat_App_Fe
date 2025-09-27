@@ -1,4 +1,3 @@
-// src/components/LoadingSpinner/LoadingSpinner.jsx
 import React from 'react';
 
 const LoadingSpinner = ({ size = 'medium', className = '' }) => {
